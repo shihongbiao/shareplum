@@ -24,7 +24,7 @@ class Office365:
         """
         Grabs a security Token to authenticate to Office 365 services
         """
-        url = "https://login.microsoftonline.com/extSTS.srf"
+        url = "https://login.partner.microsoftonline.cn/extSTS.srf"
         body = """
                 <s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope"
                   xmlns:a="http://www.w3.org/2005/08/addressing"
@@ -34,7 +34,7 @@ class Office365:
                 <a:ReplyTo>
                   <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
                 </a:ReplyTo>
-                <a:To s:mustUnderstand="1">https://login.microsoftonline.com/extSTS.srf</a:To>
+                <a:To s:mustUnderstand="1">https://login.partner.microsoftonline.cn/extSTS.srf</a:To>
                 <o:Security s:mustUnderstand="1"
                    xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
                   <o:UsernameToken>
